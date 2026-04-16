@@ -20,10 +20,10 @@
 
 ## 使用技術
 
-* PHP（Laravel）
-* MySQL
-* Docker / Docker Compose
-* Laravel Fortify（認証機能）
+・PHP 8.1-fpm
+・Laravel 10.50.2
+・MySQL 8.0.26
+・Nginx 1.21.1
 
 ---
 
@@ -47,7 +47,11 @@ docker compose up -d --build
 ```bash
 docker compose exec php composer install
 docker compose exec  cp .env.example .env
-docker compose exec  php artisan key:generate
+※ .envのDB設定などを適宜変更してください
+
+php artisan key:generate
+php artisan migrate
+php artisan db:seed
 ```
 
 ### ④ マイグレーション
