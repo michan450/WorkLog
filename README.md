@@ -54,12 +54,6 @@ php artisan migrate
 php artisan db:seed
 ```
 
-### ④ マイグレーション
-
-```bash
-docker compose exec  php artisan migrate
-```
-
 ### ⑤ アクセス
 
 http://localhost
