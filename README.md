@@ -61,8 +61,4 @@ http://localhost
 ---
 
 ## ER図
-
-（ここにER図を追加予定）
-
-
-
+![ER図](er-diagram.png)
