@@ -17,9 +17,8 @@ class CreateAttendancesTable extends Migration
           $table->id();
           $table->foreignId('user_id')->constrained()->cascadeOnDelete();
           $table->date('date');
-          $table->dateTime('check_in')->nullable();
-          $table->dateTime('check_out')->nullable();
-          $table->string('status', 20); // 勤務外 / 出勤中 / 休憩中 / 退勤済
+          $table->dateTime('clock_in')->nullable();
+          $table->dateTime('clock_out')->nullable();
           $table->timestamps();
 
           // 1日1レコード制約

@@ -7,12 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Attendance extends Model
 {
+    protected $fillable = [
+        'user_id',
+        'date',
+        'clock_in',
+        'clock_out',
+    ];
     public function user()
     {
     return $this->belongsTo(User::class);
     }
 
-public function breaks()
+public function breakTimes()
     {
     return $this->hasMany(BreakTime::class);
     }
